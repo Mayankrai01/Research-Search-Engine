@@ -1,0 +1,9 @@
+streamlit
+python-dotenv
+pathlib
+langchain-groq
+arxiv
+wikipedia
+langchain-community
+langchain-openai
+duckduckgo-search
