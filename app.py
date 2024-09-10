@@ -43,7 +43,8 @@ if prompt:=st.chat_input(placeholder="What can I help you with?"):
 
     tools=[search,arxiv,wiki]
 
-    search_agent = initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,handling_parsing_errors=True)
+    AgentExecutor.handling_parsing_errors = True
+    search_agent = initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION)
 
     with st.chat_message("assistant"):
         st_cb=StreamlitCallbackHandler(st.container(),expand_new_thoughts=False)
