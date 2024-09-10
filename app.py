@@ -24,6 +24,8 @@ This chatbot can be your one stop solution for research oriented study fetching 
 # Sidebar for settings
 st.sidebar.title("Settings")
 api_key = st.sidebar.text_input("Enter your Groq API Key:", type="password")
+st.sidebar.text("""Sign in to get your groq api key at- 
+https://console.groq.com/keys""")
 
 if "messages" not in st.session_state:
     st.session_state["messages"]=[
